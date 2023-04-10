@@ -1,0 +1,142 @@
+/* Style pour le corps de la page */
+body {
+	background-color: #ffffff;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style pour l'en-tête de la page */
+header {
+	background-color: #232f3e;
+	color: #ffffff;
+	padding: 20px;
+}
+
+/* Style pour le contenu de l'en-tête */
+.header-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Style pour le texte en italique de l'en-tête */
+.header-italic {
+	font-style: italic;
+	text-align: center;
+}
+
+/* Style pour le texte de l'en-tête */
+.header-text {
+	margin: 0;
+}
+
+/* Style pour le formulaire */
+form {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+/* Style pour les étiquettes du formulaire */
+label {
+	margin-bottom: 10px;
+}
+
+/* Style pour les champs de saisie du formulaire */
+input[type="email"],
+input[type="text"],
+select {
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+/* Style pour le bouton de soumission du formulaire */
+input[type="submit"] {
+	background-color: #232f3e;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+
+/* Style pour la boîte des types de coupons */
+.coupon-types {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+/* Style pour le titre de la boîte des types de coupons */
+.coupon-types h2 {
+	margin-top: 0;
+}
+
+/* Style pour la liste des types de coupons */
+.coupon-types ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style pour chaque élément de la liste des types de coupons */
+.coupon-types li {
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	flex: 1 1 150px;
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+}
+
+/* Style pour les informations standard dans le pied de page */
+footer {
+	background-color: #232f3e;
+	color: #ffffff;
+	padding: 20px;
+	text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .image {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .image:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  
+  

