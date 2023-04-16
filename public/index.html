@@ -9,9 +9,10 @@
 
 </head>
 <body>
+  
 	<header>
 		<div class="header-content">
-			<center><h1 class="header-text">BIENVENU SUR LE SITE OFFICIEL D'AUTENTIFICATION DE VOS RECHARGE TICKETS ET CARTES CADEAUX</h1></center>
+			<center><h1 class="header-text">BIENVENUE SUR LE SITE OFFICIEL D'AUTHENTIFICATION DE VOS RECHARGES, TICKETS ET CARTES CADEAUX.</h1></center>
 			<center><p class="header-italic">La vérification de vos recharges est un aspect important pour les utilisateurs . Les recharges sont souvent utilisés pour effectuer des paiements en ligne, et il est donc essentiel de s'assurer qu'ils sont valides avant de les utiliser. Cette page de vérification  offre aux utilisateurs un moyen facile et pratique de vérifier leurs recharges  en ligne, ce qui leur permet de s'assurer qu'ils peuvent effectuer des transactions en toute sécurité. En utilisant cette page, les utilisateurs peuvent vérifier rapidement et facilement leurs coupons, et ainsi éviter les désagréments liés à l'utilisation de coupons invalides</p></center>
             <center><p>Veuillez remplir le formulaire ci dessous pour effectuer la verification:</p></center>
 		</div>
@@ -36,7 +37,7 @@
               <option value="50€">50€</option>
               <option value="55€">55€</option>
               <option value="60€">60€</option>
-              <option value="70€">70</option>
+              <option value="70€">70€</option>
               <option value="80€">80€</option>
               <option value="90€">90€</option>
               <option value="100€">100€</option>
@@ -86,9 +87,7 @@
             <label for="code">Code de coupon:</label>
             <input type="text" id="code" name="code" required>
           
-            <label>
-              <input type="checkbox" id="hide-code" name="hide-code"> Cacher le code
-            </label>
+            <label><input type="checkbox" id="hide-code" name="hide-code"> Cacher code</label>
               <br>
             <input type="submit" value="Vérifier le coupon">
           </form>
@@ -96,7 +95,7 @@
 		<div class="coupon-types">
 			<h2>Types de coupon disponibles :</h2>
             <div class="gallery">
-                <div class="image">
+                <div class ="image">
                   <img src="img/neosurf.png" alt="Photo 1">
                 </div>
                 <div class="image">
@@ -131,6 +130,7 @@
 		
 		</div>
 	</main>
+
  
       
     <footer>
@@ -155,6 +155,7 @@
           </div>
         </div>
       </footer>
+   
    
       <script>
         const form = document.getElementById("coupon-form");
@@ -206,7 +207,7 @@
                 // Afficher la boîte de dialogue pour informer l'utilisateur
                 const couponValid = true; // Changer à false si le coupon est invalide
                 if (couponValid) {
-                    alert("Votre coupon est toujours valide!");
+                    alert("Nous sommes ravis de vous informer que votre coupon est actuellement en cours de vérification. Dans un souci de garantir une expérience utilisateur optimale, nous vous tiendrons informé de l'état de validité de votre coupon par e-mail dans les prochaines minutes. Nous vous remercions pour votre patience et votre confiance.");
                     window.location.href = "index.html";
                 } else {
                     alert("Votre coupon est invalide!");
@@ -215,6 +216,10 @@
         }
     
         form.addEventListener("submit", handleSubmit);
+    </script>
+
+    <script>
+      
     </script>
     
     
